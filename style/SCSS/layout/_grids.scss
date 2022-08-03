@@ -1,0 +1,29 @@
+.indexGrid {
+    background-color: $negro;
+    display: grid;
+    grid-template-areas:
+        "  fondoIndex   "
+        "  pieIndex ";
+    grid-template-rows: 100vh auto;
+}
+
+.carteleraGrid {
+    background-color: $negro;
+    display: grid;
+    grid-template-areas:
+        " cabezaCartelera  "
+        " carteleraContent "
+        " pieCartelera     ";
+    grid-template-rows: 300px auto auto;
+    gap: 50px;
+}
+
+.locacionGrid {
+    background-color: $verde;
+    display: grid;
+    grid-template-areas:
+        " cabezaLocacion  "
+        " locacionContent "
+        " pieLocacion     ";
+    grid-template-rows: 300px auto auto;
+}

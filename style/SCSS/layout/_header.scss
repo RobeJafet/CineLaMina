@@ -1,0 +1,31 @@
+.cabeza {
+
+    .titulo {
+        margin-top: 180px;
+        margin-left: 30px;
+
+        h1 {
+            color: $blanco;
+            @include fuente(700, normal, xx-large);
+        }
+
+        h2 {
+            color: $blanco;
+            margin-top: 10px;
+            margin-left: 5px;
+            @include fuente(300, italic, small);
+        }
+    }
+}
+
+.cabezaCartelera {
+    @extend .cabeza;
+    background-color: $verde;
+    grid-area: cabezaCartelera;
+}
+
+.cabezaLocacion {
+    @extend .cabeza;
+    background-color: transparent;
+    grid-area: cabezaLocacion;
+}

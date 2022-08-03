@@ -1,0 +1,145 @@
+.pie{
+    padding: 50px;
+    color: $blanco;
+    display: grid;
+    grid-template-areas:
+        "tituloMina   tituloMina"
+        "contacto contacto";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 200px auto;
+    padding-bottom: 100px;
+
+    h2 {
+        @include fuente(600, normal, xx-large);
+        margin-bottom: 30px;
+    }
+
+    .tituloMina {
+        grid-area: tituloMina;
+        @include fuente(800, normal, xx-large);
+    }
+
+    .pieContacto {
+        grid-area: contacto;
+        text-align: center;
+        display: grid;
+        grid-template-areas:
+            "titulo titulo        "
+            "correo redesSociales ";
+        grid-template-rows: 80px 150px;
+
+
+        .titulo {
+            grid-area: titulo;
+        }
+
+        .correo {
+            grid-area: correo;
+        }
+
+        .redesSociales {
+            grid-area: redesSociales;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .iconosRedes {
+                font-size: 40px;
+                height: auto;
+                margin-right: 10px;
+                margin-left: 10px;
+                color: $blanco;
+            }
+        }
+
+        h3 {
+            @include fuente(400, italic, large);
+        }
+        p {
+            margin-top: 10px;
+            @include fuente(400, italic, medium);
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .pie{
+        grid-template-areas: "tituloMina contacto";
+
+        .pieContacto{
+            margin-top: 15px;
+            margin-left: 10px;
+
+            .redesSociales{
+
+                .iconosRedes{
+                    font-size: 50px;
+                    margin-right: 15px;
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .pie{
+        .pieContacto{
+            margin-left: 120px;
+            grid-template-areas:
+            "titulo redesSociales "
+            "correo redesSociales ";
+            .redesSociales{
+                align-items: center;
+                .iconosRedes{
+                    font-size: 60px;
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 1200px){
+    .pie{
+        .pieContacto{
+            .redesSociales{
+                .iconosRedes{
+                    font-size: 80px;
+                }
+            }
+        }
+    }
+}
+
+.pieIndex{
+    @extend .pie;
+    grid-area: pieIndex;
+    @include degradadoAnimacion(#74b0c8, #0367a6, #0d2549);
+}
+
+.pieCartelera{
+    @extend .pie;
+    grid-area: pieCartelera;
+    @include degradadoAnimacion(#2a2d2e, #394a54, #000000);
+}
+
+.pieLocacion{
+    @extend .pie;
+    grid-area: pieLocacion;
+    @include degradadoAnimacion(#D5E5F2, #8BBBD9, #3F4F59);
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+

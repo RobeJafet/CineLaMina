@@ -1,0 +1,563 @@
+@import url("https://use.typekit.net/tzr0flh.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.indexGrid {
+  background-color: #151515;
+  display: grid;
+  grid-template-areas: "  fondoIndex   " "  pieIndex ";
+  grid-template-rows: 100vh auto;
+}
+
+.carteleraGrid {
+  background-color: #151515;
+  display: grid;
+  grid-template-areas: " cabezaCartelera  " " carteleraContent " " pieCartelera     ";
+  grid-template-rows: 300px auto auto;
+  gap: 50px;
+}
+
+.locacionGrid {
+  background-color: #22403F;
+  display: grid;
+  grid-template-areas: " cabezaLocacion  " " locacionContent " " pieLocacion     ";
+  grid-template-rows: 300px auto auto;
+}
+
+.cabeza .titulo, .cabezaLocacion .titulo, .cabezaCartelera .titulo {
+  margin-top: 180px;
+  margin-left: 30px;
+}
+.cabeza .titulo h1, .cabezaLocacion .titulo h1, .cabezaCartelera .titulo h1 {
+  color: #f4f4f0;
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: xx-large;
+}
+.cabeza .titulo h2, .cabezaLocacion .titulo h2, .cabezaCartelera .titulo h2 {
+  color: #f4f4f0;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: small;
+}
+
+.cabezaCartelera {
+  background-color: #22403F;
+  grid-area: cabezaCartelera;
+}
+
+.cabezaLocacion {
+  background-color: transparent;
+  grid-area: cabezaLocacion;
+}
+
+.cabezaNormal {
+  position: absolute;
+  top: 0px;
+  background-color: transparent;
+  width: 100%;
+  height: 110px;
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cabezaNormal img {
+  width: 60px;
+  height: 60px;
+  margin-right: 0%;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+.cabezaNormal nav {
+  margin-right: 1%;
+  margin-top: 10px;
+  width: 200px;
+  text-align: center;
+}
+.cabezaNormal nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: medium;
+}
+.cabezaNormal nav ul li {
+  padding-top: 10px;
+  transition: 1s;
+}
+.cabezaNormal nav ul li:hover {
+  transform: translateY(-4px);
+}
+.cabezaNormal nav ul li a {
+  text-decoration: none;
+  color: #f4f4f0;
+}
+
+.cabezaHamburguesa {
+  position: absolute;
+  top: 0px;
+  background-color: transparent;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cabezaHamburguesa img {
+  width: 55px;
+  height: 55px;
+  margin-right: 12px;
+  margin-top: 15px;
+}
+.cabezaHamburguesa .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 22px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+.cabezaHamburguesa .hamburgerLines {
+  position: absolute;
+  height: 26px;
+  width: 32px;
+  margin-top: 22px;
+  margin-left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cabezaHamburguesa .hamburgerLines .line {
+  height: 3.2px;
+  width: 100%;
+  border-radius: 10px;
+  background: #f4f4f0;
+}
+.cabezaHamburguesa .hamburgerLines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+.cabezaHamburguesa .hamburgerLines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+.cabezaHamburguesa .hamburgerLines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+.cabezaHamburguesa .menuItems {
+  position: absolute;
+  top: 0px;
+  padding-top: 150px;
+  background-color: #151515;
+  z-index: 1;
+  height: 150vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  list-style: none;
+}
+.cabezaHamburguesa .menuItems li {
+  margin-bottom: 60px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: large;
+}
+.cabezaHamburguesa .menuItems li a {
+  text-decoration: none;
+  color: #f4f4f0;
+}
+.cabezaHamburguesa input[type=checkbox]:checked ~ .hamburgerLines .line1 {
+  transform: rotate(45deg);
+}
+.cabezaHamburguesa input[type=checkbox]:checked ~ .hamburgerLines .line2 {
+  transform: scaleY(0);
+}
+.cabezaHamburguesa input[type=checkbox]:checked ~ .hamburgerLines .line3 {
+  transform: rotate(-45deg);
+}
+.cabezaHamburguesa input[type=checkbox]:checked ~ .logo {
+  display: none;
+}
+.cabezaHamburguesa input[type=checkbox]:checked ~ .menuItems {
+  transform: translateX(0);
+}
+
+@media (min-width: 768px) {
+  .cabezaHamburguesa {
+    display: none;
+  }
+  .cabezaNormal {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .cabezaNormal nav {
+    margin-top: 17px;
+    width: 330px;
+  }
+}
+.indexContent {
+  grid-area: fondoIndex;
+  background-image: url("https://format.creatorcdn.com/7a741b07-288a-4987-90ab-97dbd1b92a26/0/0/0/0,0,3422,2279,3422,1200/0-0-0/9e0f16a6-521a-4d0f-8acb-1dfda2851bfc/1/1/Tonchi_ML_Kyoskko_Navidad_baja_166_of_176_copy.jpg?fjkss=exp=1974576528~hmac=51d42bed0b51993aa0910f9d3d40f87cccb08bfbe2c26482515cf5336dc5ccab");
+  background-position: center center;
+  background-size: cover;
+}
+.indexContent .CineLaMina {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+}
+.indexContent .CineLaMina .linkMaps {
+  color: #f4f4f0;
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: x-large;
+  margin-top: 100px;
+}
+.indexContent .CineLaMina h1 {
+  color: #f4f4f0;
+  -webkit-text-stroke: 1.5px black;
+  font-family: futura-pt, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: xxx-large;
+}
+.indexContent .CineLaMina .tituloCine {
+  margin-top: 50px;
+}
+.indexContent .CineLaMina .tituloMina {
+  margin-top: 20px;
+}
+.indexContent .CineLaMina .botones {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.indexContent .CineLaMina .botones a {
+  display: flex;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  width: 120px;
+  position: relative;
+  padding: 10px;
+  border: 4px solid #f4f4f0;
+  border-radius: 16px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.indexContent .CineLaMina .botones a:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f0;
+  border-radius: 10px;
+  transform-origin: 0 bottom 0;
+  transform: scaleY(0);
+  transition: 0.4s ease-out;
+}
+.indexContent .CineLaMina .botones a:hover h2 {
+  color: #151515;
+}
+.indexContent .CineLaMina .botones a:hover:before {
+  transform: scaleY(1);
+}
+.indexContent .CineLaMina .botones a h2 {
+  position: relative;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: large;
+  transition: 1s ease-out;
+}
+
+.carteleraContent {
+  grid-area: carteleraContent;
+}
+.carteleraContent .titulo {
+  color: #f4f4f0;
+  margin-left: 40px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
+}
+.carteleraContent .cartelera {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+.carteleraContent .cartelera .pelicula {
+  height: 180px;
+  width: 320px;
+  margin-top: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 3px red solid;
+  background-image: url("/images/PlaytimeMUBI.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.carteleraContent .cartelera .pelicula .tituloPelicula {
+  margin-top: 110px;
+  margin-left: 15px;
+}
+.carteleraContent .cartelera .pelicula .tituloPelicula h2 {
+  color: #f4f4f0;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: large;
+}
+.carteleraContent .cartelera .pelicula .tituloPelicula h3 {
+  color: #f4f4f0;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: small;
+}
+
+.locacionContent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+.locacionContent .imagen {
+  margin-top: 30px;
+  text-align: center;
+}
+.locacionContent .imagen img {
+  width: 80%;
+}
+.locacionContent .texto {
+  color: #f4f4f0;
+  margin-top: 80px;
+  width: 250px;
+}
+.locacionContent .texto h1 {
+  text-align: center;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: x-large;
+  margin-bottom: 40px;
+}
+.locacionContent .texto h3 {
+  text-align: justify;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: medium;
+}
+
+@media (min-width: 576px) {
+  .locacionContent .texto {
+    width: 400px;
+  }
+  .locacionContent .imagen img {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .locacionContent {
+    justify-content: space-evenly;
+  }
+  .locacionContent .texto {
+    margin-top: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .carteleraContent .cartelera {
+    width: 70%;
+    justify-content: space-between;
+  }
+  .carteleraContent .cartelera .pelicula {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .carteleraContent .cartelera {
+    width: 60%;
+  }
+  .carteleraContent .cartelera .pelicula {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .locacionContent {
+    justify-content: space-between;
+  }
+  .locacionContent .texto {
+    margin-top: 40px;
+    margin-right: 15%;
+  }
+  .locacionContent .imagen {
+    margin-left: 15%;
+  }
+}
+.pie, .pieLocacion, .pieCartelera, .pieIndex {
+  padding: 50px;
+  color: #f4f4f0;
+  display: grid;
+  grid-template-areas: "tituloMina   tituloMina" "contacto contacto";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 200px auto;
+  padding-bottom: 100px;
+}
+.pie h2, .pieLocacion h2, .pieCartelera h2, .pieIndex h2 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: xx-large;
+  margin-bottom: 30px;
+}
+.pie .tituloMina, .pieLocacion .tituloMina, .pieCartelera .tituloMina, .pieIndex .tituloMina {
+  grid-area: tituloMina;
+  font-family: futura-pt, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: xx-large;
+}
+.pie .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
+  grid-area: contacto;
+  text-align: center;
+  display: grid;
+  grid-template-areas: "titulo titulo        " "correo redesSociales ";
+  grid-template-rows: 80px 150px;
+}
+.pie .pieContacto .titulo, .pieLocacion .pieContacto .titulo, .pieCartelera .pieContacto .titulo, .pieIndex .pieContacto .titulo {
+  grid-area: titulo;
+}
+.pie .pieContacto .correo, .pieLocacion .pieContacto .correo, .pieCartelera .pieContacto .correo, .pieIndex .pieContacto .correo {
+  grid-area: correo;
+}
+.pie .pieContacto .redesSociales, .pieLocacion .pieContacto .redesSociales, .pieCartelera .pieContacto .redesSociales, .pieIndex .pieContacto .redesSociales {
+  grid-area: redesSociales;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pie .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
+  font-size: 40px;
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #f4f4f0;
+}
+.pie .pieContacto h3, .pieLocacion .pieContacto h3, .pieCartelera .pieContacto h3, .pieIndex .pieContacto h3 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: large;
+}
+.pie .pieContacto p, .pieLocacion .pieContacto p, .pieCartelera .pieContacto p, .pieIndex .pieContacto p {
+  margin-top: 10px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: medium;
+}
+
+@media (min-width: 768px) {
+  .pie, .pieLocacion, .pieCartelera, .pieIndex {
+    grid-template-areas: "tituloMina contacto";
+  }
+  .pie .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .pie .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
+    font-size: 50px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .pie .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
+    margin-left: 120px;
+    grid-template-areas: "titulo redesSociales " "correo redesSociales ";
+  }
+  .pie .pieContacto .redesSociales, .pieLocacion .pieContacto .redesSociales, .pieCartelera .pieContacto .redesSociales, .pieIndex .pieContacto .redesSociales {
+    align-items: center;
+  }
+  .pie .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .pie .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
+    font-size: 80px;
+  }
+}
+.pieIndex {
+  grid-area: pieIndex;
+  background: linear-gradient(-45deg, #74b0c8, #0367a6, #0d2549, #0367a6, #74b0c8);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
+
+.pieCartelera {
+  grid-area: pieCartelera;
+  background: linear-gradient(-45deg, #2a2d2e, #394a54, #000000, #394a54, #2a2d2e);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
+
+.pieLocacion {
+  grid-area: pieLocacion;
+  background: linear-gradient(-45deg, #D5E5F2, #8BBBD9, #3F4F59, #8BBBD9, #D5E5F2);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
