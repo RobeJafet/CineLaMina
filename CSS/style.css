@@ -323,19 +323,35 @@
   justify-content: center;
   margin-bottom: 200px;
 }
+.carteleraContent .cartelera .playtime {
+  background-image: url("../images/PlaytimeMUBI.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.carteleraContent .cartelera .chuncking {
+  background-image: url("../images/ChunkingMUBI.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.carteleraContent .cartelera .cuatro {
+  background-image: url("../images/400MUBI.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+.carteleraContent .cartelera .drive {
+  background-image: url("../images/DriveMUBI.jpg");
+  background-position: center center;
+  background-size: cover;
+}
 .carteleraContent .cartelera .pelicula {
   height: 180px;
   width: 320px;
   margin-top: 70px;
   margin-left: 20px;
   margin-right: 20px;
-  border: 3px red solid;
-  background-image: url("/images/PlaytimeMUBI.jpg");
-  background-position: center center;
-  background-size: cover;
 }
 .carteleraContent .cartelera .pelicula .tituloPelicula {
-  margin-top: 110px;
+  margin-top: 120px;
   margin-left: 15px;
 }
 .carteleraContent .cartelera .pelicula .tituloPelicula h2 {
@@ -355,7 +371,7 @@
 
 .locacionContent {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   flex-direction: row;
   justify-content: center;
   margin-bottom: 200px;
@@ -369,8 +385,8 @@
 }
 .locacionContent .texto {
   color: #f4f4f0;
-  margin-top: 80px;
-  width: 250px;
+  margin-top: 20px;
+  width: 300px;
 }
 .locacionContent .texto h1 {
   text-align: center;
@@ -401,7 +417,8 @@
     justify-content: space-evenly;
   }
   .locacionContent .texto {
-    margin-top: 40px;
+    width: 450px;
+    margin-bottom: 80px;
   }
 }
 @media (min-width: 992px) {
@@ -421,16 +438,6 @@
   .carteleraContent .cartelera .pelicula {
     margin-left: 20px;
     margin-right: 20px;
-  }
-  .locacionContent {
-    justify-content: space-between;
-  }
-  .locacionContent .texto {
-    margin-top: 40px;
-    margin-right: 15%;
-  }
-  .locacionContent .imagen {
-    margin-left: 15%;
   }
 }
 .pie, .pieLocacion, .pieCartelera, .pieIndex {
@@ -543,7 +550,7 @@
 
 .pieLocacion {
   grid-area: pieLocacion;
-  background: linear-gradient(-45deg, #D5E5F2, #8BBBD9, #3F4F59, #8BBBD9, #D5E5F2);
+  background: linear-gradient(-45deg, #22403F, #2A5748, #254D35, #2A5748, #22403F);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
 }

@@ -127,7 +127,7 @@
 .pieLocacion{
     @extend .pie;
     grid-area: pieLocacion;
-    @include degradadoAnimacion(#D5E5F2, #8BBBD9, #3F4F59);
+    @include degradadoAnimacion(#22403F, #2A5748, #254D35);
 }
 
 @keyframes gradient {
