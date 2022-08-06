@@ -31,18 +31,32 @@
   grid-template-rows: 300px auto auto;
 }
 
-.cabeza .titulo, .cabezaLocacion .titulo, .cabezaCartelera .titulo {
+.contactoGrid {
+  background-color: #22403F;
+  display: grid;
+  grid-template-areas: " cabezaContacto    " " contactoContent   " " piePaginaContacto ";
+  grid-template-rows: 300px auto auto;
+}
+
+.nosotrosGrid {
+  background-color: #151515;
+  display: grid;
+  grid-template-areas: " cabezaNosotros " " nosotrosContent" " pieNosotros    ";
+  grid-template-rows: 300px auto auto;
+}
+
+.cabeza .titulo, .cabezaNosotros .titulo, .cabezaContacto .titulo, .cabezaLocacion .titulo, .cabezaCartelera .titulo {
   margin-top: 180px;
   margin-left: 30px;
 }
-.cabeza .titulo h1, .cabezaLocacion .titulo h1, .cabezaCartelera .titulo h1 {
+.cabeza .titulo h1, .cabezaNosotros .titulo h1, .cabezaContacto .titulo h1, .cabezaLocacion .titulo h1, .cabezaCartelera .titulo h1 {
   color: #f4f4f0;
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: xx-large;
 }
-.cabeza .titulo h2, .cabezaLocacion .titulo h2, .cabezaCartelera .titulo h2 {
+.cabeza .titulo h2, .cabezaNosotros .titulo h2, .cabezaContacto .titulo h2, .cabezaLocacion .titulo h2, .cabezaCartelera .titulo h2 {
   color: #f4f4f0;
   margin-top: 10px;
   margin-left: 5px;
@@ -60,6 +74,16 @@
 .cabezaLocacion {
   background-color: transparent;
   grid-area: cabezaLocacion;
+}
+
+.cabezaContacto {
+  background-color: transparent;
+  grid-area: cabezaContacto;
+}
+
+.cabezaNosotros {
+  background-color: transparent;
+  grid-area: cabezaNosotros;
 }
 
 .cabezaNormal {
@@ -370,6 +394,7 @@
 }
 
 .locacionContent {
+  grid-area: locacionContent;
   display: flex;
   flex-wrap: wrap-reverse;
   flex-direction: row;
@@ -404,12 +429,118 @@
   font-size: medium;
 }
 
+.contactoContent {
+  grid-area: contactoContent;
+  margin-bottom: 100px;
+}
+.contactoContent form {
+  margin-left: 10%;
+  margin-right: 10%;
+  display: grid;
+  grid-template-areas: "nombre" "correo" "detalles" "boton";
+  gap: 30px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: medium;
+  color: #f4f4f0;
+}
+.contactoContent form .nombre {
+  grid-area: nombre;
+}
+.contactoContent form .nombre input {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+.contactoContent form .correo {
+  grid-area: correo;
+}
+.contactoContent form .correo input {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+}
+.contactoContent form .detalles {
+  grid-area: detalles;
+}
+.contactoContent form .detalles textarea {
+  width: 100%;
+  margin-top: 20px;
+}
+.contactoContent form .boton {
+  grid-area: boton;
+  text-align: center;
+}
+.contactoContent form .boton button {
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: medium;
+  color: #f4f4f0;
+  background-color: transparent;
+  height: 50px;
+  width: 100px;
+  border: 2px #f4f4f0 solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.contactoContent form .boton button:hover {
+  background-color: #f4f4f0;
+  color: #22403F;
+  transition: 0.5s;
+}
+
+.nosotrosContent {
+  grid-area: nosotrosContent;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+.nosotrosContent img {
+  width: 300px;
+}
+.nosotrosContent .texto {
+  text-align: center;
+  margin-top: 50px;
+  width: 300px;
+  color: #f4f4f0;
+}
+.nosotrosContent .texto h1 {
+  text-align: center;
+  font-family: futura-pt, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: x-large;
+  margin-bottom: 40px;
+}
+.nosotrosContent .texto h3 {
+  text-align: justify;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: medium;
+}
+
 @media (min-width: 576px) {
   .locacionContent .texto {
     width: 400px;
   }
   .locacionContent .imagen img {
     width: auto;
+  }
+  .nosotrosContent img {
+    width: 400px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .nosotrosContent .texto {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 400px;
   }
 }
 @media (min-width: 768px) {
@@ -419,6 +550,9 @@
   .locacionContent .texto {
     width: 450px;
     margin-bottom: 80px;
+  }
+  .contactoContent form {
+    grid-template-areas: "nombre   correo   " "detalles detalles " "boton    boton    ";
   }
 }
 @media (min-width: 992px) {
@@ -430,6 +564,9 @@
     margin-left: 0px;
     margin-right: 0px;
   }
+  .locacionContent .texto {
+    margin-top: 50px;
+  }
 }
 @media (min-width: 1200px) {
   .carteleraContent .cartelera {
@@ -439,8 +576,14 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+  .nosotrosContent img {
+    width: 600px;
+  }
+  .nosotrosContent .texto {
+    margin-top: 10px;
+  }
 }
-.pie, .pieLocacion, .pieCartelera, .pieIndex {
+.pie, .pieNosotros, .piePaginaContacto, .pieLocacion, .pieCartelera, .pieIndex {
   padding: 50px;
   color: #f4f4f0;
   display: grid;
@@ -449,53 +592,53 @@
   grid-template-rows: 200px auto;
   padding-bottom: 100px;
 }
-.pie h2, .pieLocacion h2, .pieCartelera h2, .pieIndex h2 {
+.pie h2, .pieNosotros h2, .piePaginaContacto h2, .pieLocacion h2, .pieCartelera h2, .pieIndex h2 {
   font-family: futura-pt, sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: xx-large;
   margin-bottom: 30px;
 }
-.pie .tituloMina, .pieLocacion .tituloMina, .pieCartelera .tituloMina, .pieIndex .tituloMina {
+.pie .tituloMina, .pieNosotros .tituloMina, .piePaginaContacto .tituloMina, .pieLocacion .tituloMina, .pieCartelera .tituloMina, .pieIndex .tituloMina {
   grid-area: tituloMina;
   font-family: futura-pt, sans-serif;
   font-weight: 800;
   font-style: normal;
   font-size: xx-large;
 }
-.pie .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
+.pie .pieContacto, .pieNosotros .pieContacto, .piePaginaContacto .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
   grid-area: contacto;
   text-align: center;
   display: grid;
   grid-template-areas: "titulo titulo        " "correo redesSociales ";
   grid-template-rows: 80px 150px;
 }
-.pie .pieContacto .titulo, .pieLocacion .pieContacto .titulo, .pieCartelera .pieContacto .titulo, .pieIndex .pieContacto .titulo {
+.pie .pieContacto .titulo, .pieNosotros .pieContacto .titulo, .piePaginaContacto .pieContacto .titulo, .pieLocacion .pieContacto .titulo, .pieCartelera .pieContacto .titulo, .pieIndex .pieContacto .titulo {
   grid-area: titulo;
 }
-.pie .pieContacto .correo, .pieLocacion .pieContacto .correo, .pieCartelera .pieContacto .correo, .pieIndex .pieContacto .correo {
+.pie .pieContacto .correo, .pieNosotros .pieContacto .correo, .piePaginaContacto .pieContacto .correo, .pieLocacion .pieContacto .correo, .pieCartelera .pieContacto .correo, .pieIndex .pieContacto .correo {
   grid-area: correo;
 }
-.pie .pieContacto .redesSociales, .pieLocacion .pieContacto .redesSociales, .pieCartelera .pieContacto .redesSociales, .pieIndex .pieContacto .redesSociales {
+.pie .pieContacto .redesSociales, .pieNosotros .pieContacto .redesSociales, .piePaginaContacto .pieContacto .redesSociales, .pieLocacion .pieContacto .redesSociales, .pieCartelera .pieContacto .redesSociales, .pieIndex .pieContacto .redesSociales {
   grid-area: redesSociales;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.pie .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
+.pie .pieContacto .redesSociales .iconosRedes, .pieNosotros .pieContacto .redesSociales .iconosRedes, .piePaginaContacto .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
   font-size: 40px;
   height: auto;
   margin-right: 10px;
   margin-left: 10px;
   color: #f4f4f0;
 }
-.pie .pieContacto h3, .pieLocacion .pieContacto h3, .pieCartelera .pieContacto h3, .pieIndex .pieContacto h3 {
+.pie .pieContacto h3, .pieNosotros .pieContacto h3, .piePaginaContacto .pieContacto h3, .pieLocacion .pieContacto h3, .pieCartelera .pieContacto h3, .pieIndex .pieContacto h3 {
   font-family: futura-pt, sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: large;
 }
-.pie .pieContacto p, .pieLocacion .pieContacto p, .pieCartelera .pieContacto p, .pieIndex .pieContacto p {
+.pie .pieContacto p, .pieNosotros .pieContacto p, .piePaginaContacto .pieContacto p, .pieLocacion .pieContacto p, .pieCartelera .pieContacto p, .pieIndex .pieContacto p {
   margin-top: 10px;
   font-family: futura-pt, sans-serif;
   font-weight: 400;
@@ -504,33 +647,33 @@
 }
 
 @media (min-width: 768px) {
-  .pie, .pieLocacion, .pieCartelera, .pieIndex {
+  .pie, .pieNosotros, .piePaginaContacto, .pieLocacion, .pieCartelera, .pieIndex {
     grid-template-areas: "tituloMina contacto";
   }
-  .pie .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
+  .pie .pieContacto, .pieNosotros .pieContacto, .piePaginaContacto .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
     margin-top: 15px;
     margin-left: 10px;
   }
-  .pie .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
+  .pie .pieContacto .redesSociales .iconosRedes, .pieNosotros .pieContacto .redesSociales .iconosRedes, .piePaginaContacto .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
     font-size: 50px;
     margin-right: 15px;
     margin-left: 15px;
   }
 }
 @media (min-width: 992px) {
-  .pie .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
+  .pie .pieContacto, .pieNosotros .pieContacto, .piePaginaContacto .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
     margin-left: 120px;
     grid-template-areas: "titulo redesSociales " "correo redesSociales ";
   }
-  .pie .pieContacto .redesSociales, .pieLocacion .pieContacto .redesSociales, .pieCartelera .pieContacto .redesSociales, .pieIndex .pieContacto .redesSociales {
+  .pie .pieContacto .redesSociales, .pieNosotros .pieContacto .redesSociales, .piePaginaContacto .pieContacto .redesSociales, .pieLocacion .pieContacto .redesSociales, .pieCartelera .pieContacto .redesSociales, .pieIndex .pieContacto .redesSociales {
     align-items: center;
   }
-  .pie .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
+  .pie .pieContacto .redesSociales .iconosRedes, .pieNosotros .pieContacto .redesSociales .iconosRedes, .piePaginaContacto .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
     font-size: 60px;
   }
 }
 @media (min-width: 1200px) {
-  .pie .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
+  .pie .pieContacto .redesSociales .iconosRedes, .pieNosotros .pieContacto .redesSociales .iconosRedes, .piePaginaContacto .pieContacto .redesSociales .iconosRedes, .pieLocacion .pieContacto .redesSociales .iconosRedes, .pieCartelera .pieContacto .redesSociales .iconosRedes, .pieIndex .pieContacto .redesSociales .iconosRedes {
     font-size: 80px;
   }
 }
@@ -551,6 +694,20 @@
 .pieLocacion {
   grid-area: pieLocacion;
   background: linear-gradient(-45deg, #22403F, #2A5748, #254D35, #2A5748, #22403F);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
+
+.piePaginaContacto {
+  grid-area: piePaginaContacto;
+  background: linear-gradient(-45deg, #22403F, #2A5748, #254D35, #2A5748, #22403F);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+}
+
+.pieNosotros {
+  grid-area: pieNosotros;
+  background: linear-gradient(-45deg, #2a2d2e, #394a54, #000000, #394a54, #2a2d2e);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
 }

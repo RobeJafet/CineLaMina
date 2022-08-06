@@ -27,3 +27,23 @@
         " pieLocacion     ";
     grid-template-rows: 300px auto auto;
 }
+
+.contactoGrid {
+    background-color: $verde;
+    display: grid;
+    grid-template-areas:
+        " cabezaContacto    "
+        " contactoContent   "
+        " piePaginaContacto ";
+    grid-template-rows: 300px auto auto;
+}
+
+.nosotrosGrid{
+    background-color: $negro;
+    display: grid;
+    grid-template-areas: " cabezaNosotros "
+                         " nosotrosContent"
+                         " pieNosotros    ";
+    grid-template-rows: 300px auto auto;
+}
+

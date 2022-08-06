@@ -130,6 +130,18 @@
     @include degradadoAnimacion(#22403F, #2A5748, #254D35);
 }
 
+.piePaginaContacto{
+    @extend .pie;
+    grid-area: piePaginaContacto;
+    @include degradadoAnimacion(#22403F, #2A5748, #254D35);
+}
+
+.pieNosotros{
+    @extend .pie;
+    grid-area: pieNosotros;
+    @include degradadoAnimacion(#2a2d2e, #394a54, #000000);
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;

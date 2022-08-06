@@ -29,3 +29,15 @@
     background-color: transparent;
     grid-area: cabezaLocacion;
 }
+
+.cabezaContacto {
+    @extend .cabeza;
+    background-color: transparent;
+    grid-area: cabezaContacto;
+}
+
+.cabezaNosotros{
+    @extend .cabeza;
+    background-color: transparent;
+    grid-area: cabezaNosotros;
+}
