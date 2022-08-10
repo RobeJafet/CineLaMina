@@ -402,7 +402,9 @@
   margin-bottom: 200px;
 }
 .locacionContent .imagen {
-  margin-top: 30px;
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
 }
 .locacionContent .imagen img {
@@ -410,6 +412,8 @@
 }
 .locacionContent .texto {
   color: #f4f4f0;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-top: 20px;
   width: 300px;
 }
@@ -551,6 +555,9 @@
     width: 450px;
     margin-bottom: 80px;
   }
+  .locacionContent .imagen {
+    margin-top: 0px;
+  }
   .contactoContent form {
     grid-template-areas: "nombre   correo   " "detalles detalles " "boton    boton    ";
   }
@@ -563,9 +570,6 @@
   .carteleraContent .cartelera .pelicula {
     margin-left: 0px;
     margin-right: 0px;
-  }
-  .locacionContent .texto {
-    margin-top: 50px;
   }
 }
 @media (min-width: 1200px) {

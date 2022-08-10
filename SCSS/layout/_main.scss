@@ -159,7 +159,9 @@
     margin-bottom: 200px;
 
     .imagen {
-        margin-top: 30px;
+        margin-top: 100px;
+        margin-left: 20px;
+        margin-right: 20px;
         text-align: center;
         img {
             width: 80%;
@@ -168,6 +170,8 @@
 
     .texto {
         color: $blanco;
+        margin-left: 20px;
+        margin-right: 20px;
         margin-top: 20px;
         width: 300px;
 
@@ -320,6 +324,9 @@
             width: 450px;
             margin-bottom: 80px;
         }
+        .imagen{
+            margin-top: 0px;
+        }
     }
 
     .contactoContent{
@@ -340,12 +347,6 @@
                 margin-left: 0px;
                 margin-right: 0px;
             }
-        }
-    }
-
-    .locacionContent {
-        .texto {
-            margin-top: 50px;
         }
     }
 }
