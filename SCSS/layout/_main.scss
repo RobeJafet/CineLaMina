@@ -1,3 +1,6 @@
+//Estilo del contenido de cada una de las páginas de nuestro sitio web.
+
+//------------Estilo de la página index--------------------
 .indexContent {
     grid-area: fondoIndex;
     background-image: url("https://format.creatorcdn.com/7a741b07-288a-4987-90ab-97dbd1b92a26/0/0/0/0,0,3422,2279,3422,1200/0-0-0/9e0f16a6-521a-4d0f-8acb-1dfda2851bfc/1/1/Tonchi_ML_Kyoskko_Navidad_baja_166_of_176_copy.jpg?fjkss=exp=1974576528~hmac=51d42bed0b51993aa0910f9d3d40f87cccb08bfbe2c26482515cf5336dc5ccab");
@@ -83,6 +86,7 @@
     }
 }
 
+//------------Estilo de la página cartelera----------------
 .carteleraContent {
     grid-area: carteleraContent;
 
@@ -150,6 +154,7 @@
     }
 }
 
+//------------Estilo de la página Locación-----------------
 .locacionContent {
     grid-area: locacionContent;
     display: flex;
@@ -188,6 +193,7 @@
     }
 }
 
+//------------Estilo de la página Contacto-----------------
 .contactoContent {
     grid-area: contactoContent;
     margin-bottom: 100px;
@@ -257,6 +263,7 @@
     }
 }
 
+//------------Estilo de la página Nosotros-----------------
 .nosotrosContent {
     grid-area: nosotrosContent;
     display: flex;
@@ -286,6 +293,8 @@
         }
     }
 }
+
+// ------------------ Media Queries de los contenidos ------
 
 @media (min-width: 576px) {
     .locacionContent {
@@ -370,7 +379,5 @@
         .texto{
             margin-top: 10px;
         }
-    }
-
-    
+    }  
 }

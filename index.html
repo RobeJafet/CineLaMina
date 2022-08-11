@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Cabecera donde tendremos el SEO (descripción, keywords, título), el enlace a CSS, y enlace a iconos de Font Awesome -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +14,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
+<!-- Cuerpo de página Index, donde tendremos una clase IndexGrid, que nos ayudará con la organización del cuerpo de index -->
 <body class="indexGrid">
+    <!-- Cabeza de página Index -->
     <header>
-        <div class="cabezaHamburguesa">
+        <!-- navbarHamburguesa será nuestra navbar cuado estemos en la vista para móviles (Menu de Hamburguesa) -->
+        <div class="navbarHamburguesa">
             <nav>
+                <!-- Icono de líneas de la navbar de hamburguesa -->
+                <!-- Input para poder realizar la animación y desplegar el menu offcanvas -->
                 <input class="checkbox" type="checkbox" name="" id="" />
                 <div class="hamburgerLines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
                     <span class="line line3"></span>
                 </div>
+                <!-- Enlaces a las demás páginas html de nuestro sitio web -->
                 <ul class="menuItems">
                     <li>
                         <a href="index.html">Inicio</a>
@@ -41,12 +48,16 @@
                     </li>
                 </ul>
             </nav>
+            <!-- Logo del sitio web -->
             <img src="./images/Cine_MIna3.png">
         </div>
 
-        <div class="cabezaNormal">
+        <!-- navbarNormal será nuestra navbar cuando estemos en una vista para tabletas o computadoras de escritorio-->
+        <div class="navbarNormal">
+            <!-- Logo del sitio web -->
             <img src="./images/Cine_MIna3.png">
             <nav>
+                <!-- Enlaces a las demás páginas html de nuestro sitio web -->
                 <ul>
                     <li>
                         <a href="index.html">Inicio</a>
@@ -69,13 +80,18 @@
 
      </header>
 
+    <!-- Contenido de página index  -->
     <main class="indexContent">
+        <!-- Parte principal de la página Index -->
         <article class="CineLaMina">
+            <!-- Título de Cine La Mina -->
             <h1 class="tituloCine">Cine</h1>
             <h1 class="tituloMina">La Mina</h1>
+             <!-- Enlace a la dirección del Cine  -->
             <a href="https://www.google.com.mx/maps/preview" target="_blank" class="linkMaps">
                 ubicaciones del cine
             </a>
+            <!-- Botones hacía la locacion del cine o hacia la cartelera -->
             <div class="botones">
                 <a href="./pages/cartelera.html">
                     <h2>Cartelera</h2>
@@ -87,17 +103,20 @@
         </article>
     </main>
 
+    <!-- Pie de página Index -->
     <footer class="pieIndex">
+        <!-- Título de Cine La Mina en el footer -->
         <div class="tituloMina">
             <h1>Cine</h1>
             <h1>La Mina</h1>
         </div>
-        <div class="pieContacto">
 
+        <!-- Contacto en el footer -->
+        <div class="pieContacto">
             <div class="titulo">
                 <h2>Contacto</h2>
             </div>
-
+            <!-- Datos de contacto en el footer-->
             <div class="correo">
                 <h3>cine@lamina.com</h3>
                 <h3>473-999-9999</h3>
@@ -106,6 +125,8 @@
                 <p>Lorem ipsum dolor sit, amet </p>
             </div>
 
+            <!-- Redes Sociales en el footer, donde cada div tiene un enlace hacia cada red social -->
+            <!-- Con un icono de Font Awesome -->
             <div class="redesSociales">
                 <div>
                     <a href="https://www.facebook.com/CineLaMina" target="_blank">
@@ -124,6 +145,7 @@
                 </div>   
             </div>
         </div>
+
     </footer>
 
 </body>

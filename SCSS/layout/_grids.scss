@@ -1,3 +1,6 @@
+// Layout donde se encuentran los grids de cada uno de los cuerpos de nuestras páginas
+
+//Grid de la página Index
 .indexGrid {
     background-color: $negro;
     display: grid;
@@ -7,6 +10,7 @@
     grid-template-rows: 100vh auto;
 }
 
+//Grid de la página Cartelera
 .carteleraGrid {
     background-color: $negro;
     display: grid;
@@ -18,6 +22,7 @@
     gap: 50px;
 }
 
+//Grid de la página Locación
 .locacionGrid {
     background-color: $verde;
     display: grid;
@@ -28,6 +33,7 @@
     grid-template-rows: 300px auto auto;
 }
 
+//Grid de la página Contacto
 .contactoGrid {
     background-color: $verde;
     display: grid;
@@ -38,6 +44,7 @@
     grid-template-rows: 300px auto auto;
 }
 
+//Grid de la página Nosotros
 .nosotrosGrid{
     background-color: $negro;
     display: grid;

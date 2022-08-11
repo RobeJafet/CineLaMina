@@ -1,3 +1,6 @@
+//Layout para almacenar los mixin
+
+//Mixin para establecer fuente
 @mixin fuente($anchoFuente, $estiloFuente, $tamanioFuente){
     font-family: $fuentePrincipal;
     font-weight: $anchoFuente;
@@ -5,7 +8,7 @@
     font-size: $tamanioFuente;
 }
 
-
+//Mixin para establecer los colores de la animación del degradado
 @mixin degradadoAnimacion($color1, $color2, $color3){
     background: linear-gradient(-45deg, $color1, $color2, $color3, $color2, $color1);
     background-size: 400% 400%;
