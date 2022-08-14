@@ -10,11 +10,17 @@
     <meta name="description" content="Cartelera de Cine La Mina, que ver el dia de hoy. ">
     <meta name="keywords" content="cine, cartelera, guanajuato, mexico, peliculas">
     <title>Cartelera de Cine la Mina</title>
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <!-- Cuerpo de cartelera, donde tendremos una clase carteleraGrid, que nos ayudará con la organización del cuerpo de cartelera -->
+
 <body class="carteleraGrid">
     <!-- Cabeza de página de Cartelera -->
     <header class="cabezaCartelera">
@@ -94,53 +100,149 @@
         <!-- Sección del contenido de la cartelera donde se verán las películas disponibles -->
         <section class="cartelera">
             <!-- Cada artículo tendra una pelicula a ser puesta en función -->
-            <article class="pelicula playtime">
+            <a class="pelicula playtime" href="#" data-bs-toggle="modal" data-bs-target="#peliculaPlaytime">
                 <div class="tituloPelicula">
                     <h2>PLAYTIME</h2>
                     <h3>VIERNES 15:00 hrs CONSTRUCCION</h3>
                 </div>
-            </article>
-            <article class="pelicula chuncking">
+            </a>
+            <a class="pelicula chuncking" href="#" data-bs-toggle="modal" data-bs-target="#peliculaChuncking">
                 <div class="tituloPelicula">
                     <h2>CHUNKING EXPRESS</h2>
                     <h3>JUEVES 20:00 hrs CONSTRUCCION</h3>
                 </div>
-            </article>
-            <article class="pelicula cuatro">
+            </a>
+            <a class="pelicula cuatro" href="#" data-bs-toggle="modal" data-bs-target="#peliculaCuatro">
                 <div class="tituloPelicula">
                     <h2>LOS 400 GOLPES</h2>
                     <h3>MIERCOLES 11:00 hrs CONSTRUCCION</h3>
                 </div>
-            </article>
-            <article class="pelicula drive">
+            </a>
+            <a class="pelicula drive" href="" data-bs-toggle="modal" data-bs-target="#peliculaDrive">
                 <div class="tituloPelicula">
                     <h2>DRIVE MY CAR</h2>
                     <h3>VIERNES 11:00 hrs CONSTRUCCION</h3>
                 </div>
-            </article>
+            </a>
+
+
+            <!-- Modals de Bootstrap-->
+
+            <!-- Modal de Pelicula Playtime -->
+            <div class="modal fade" id="peliculaPlaytime" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="staticBackdropLabel">PLAYTIME</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Un grupo de turistas americanas hace un viaje por Europa, que prevé la visita de una
+                                capital por día. Al llegar a París, se dan cuenta de que el aeropuerto es exactamente
+                                igual al de Roma, de que las carreteras son idénticas a las de Hamburgo y que las
+                                farolas guardan un curioso parecido con las de Nueva York. En resumidas cuentas, el
+                                escenario no cambia de una ciudad a otra.</p>
+                            <img src="../images/PlaytimeMUBI.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Modal de Pelicula Chuncking Express -->
+            <div class="modal fade" id="peliculaChuncking" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="staticBackdropLabel">CHUNCKING EXPRESS</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Dos historias de amor independientes que se desarrollan en el popular barrio turístico de
+                                Tsimhatsui, en Hong Kong. La primera describe el fugaz encuentro entre un joven policía
+                                en plena crisis amorosa y una misteriosa mujer fatal traficante de drogas. La segunda se
+                                centra en el singular romance entre un solitario y sencillo agente de policia y la joven
+                                camarera del pobre bar donde aquél suele comer.</p>
+                            <img src="../images/ChunkingMubi.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de la pelicula Los 400 Golpes -->
+            <div class="modal fade" id="peliculaCuatro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="staticBackdropLabel">LOS 400 GOLPES</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Con sólo catorce años, Antoine Doinel se ve obligado no sólo a ser testigo de los
+                                problemas conyugales de sus padres, sino también a soportar las exigencias de un severo
+                                profesor. Un día, asustado porque no ha cumplido un castigo impuesto por el maestro,
+                                decide hacer novillos con su amigo René. Inesperadamente, ve a su madre en compañía de
+                                otro hombre; la culpa y el miedo lo arrastran a una serie de mentiras que poco a poco
+                                van calando en su ánimo.</p>
+                            <img src="../images/400MUBI.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de la pelicula Drive My Car -->
+            <div class="modal fade" id="peliculaDrive" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-hidden="true">
+                <div class="modal-dialog ">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title" id="staticBackdropLabel">DRIVE MY CAR</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Pese a no ser capaz de recuperarse de un drama personal, Yusuke Kafuku, actor y director
+                                de teatro, acepta montar la obra "Tío Vania" en un festival de Hiroshima. Allí, conoce a
+                                Misaki, una joven reservada que le han asignado como chófer. A medida que pasan los
+                                trayectos, la sinceridad creciente de sus conversaciones les obliga a enfrentarse a su
+                                pasado</p>
+                            <img src="../images/DriveMUBI.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
     </main>
+
+
 
     <!-- Pie de página de Cartelera -->
     <footer class="pieCartelera">
         <!-- Título de Cine La Mina en el footer -->
         <div class="tituloMina">
-            <h1>Cine</h1>
-            <h1>La Mina</h1>
+            <h3 class="titulo">Cine</h3>
+            <h3 class="titulo">La Mina</h3>
         </div>
         <!-- Contacto en el footer -->
         <div class="pieContacto">
             <div class="titulo">
                 <h2>Contacto</h2>
             </div>
+
             <!-- Datos de contacto en el footer-->
             <div class="correo">
                 <h3>cine@lamina.com</h3>
                 <h3>473-999-9999</h3>
-                <br>
-                <h3>Datos de Contacto: </h3>
-                <p>Lorem ipsum dolor sit, amet </p>
+                <div>
+                    <h3>Datos de Contacto: </h3>
+                    <p>Lorem ipsum dolor sit, amet </p>
+                </div>
             </div>
+
             <!-- Redes Sociales en el footer, donde cada div tiene un enlace hacia cada red social -->
             <!-- Con un icono de Font Awesome -->
             <div class="redesSociales">

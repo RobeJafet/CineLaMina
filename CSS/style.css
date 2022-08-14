@@ -45,6 +45,42 @@
   grid-template-rows: 300px auto auto;
 }
 
+.modal-dialog {
+  top: 40px;
+}
+.modal-dialog .modal-content {
+  background-color: #22403F !important;
+  color: #f4f4f0 !important;
+}
+.modal-dialog .modal-content .modal-header .modal-title {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: large;
+}
+.modal-dialog .modal-content .modal-body {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.modal-dialog .modal-content .modal-body p {
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: small;
+  text-align: left;
+}
+.modal-dialog .modal-content .modal-body img {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+button.btn-close {
+  filter: brightness(0) invert(1);
+}
+
 .cabeza .titulo, .cabezaNosotros .titulo, .cabezaContacto .titulo, .cabezaLocacion .titulo, .cabezaCartelera .titulo {
   margin-top: 180px;
   margin-left: 30px;
@@ -110,6 +146,8 @@
   text-align: center;
 }
 .navbarNormal nav ul {
+  padding-left: 0px !important;
+  margin-bottom: 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -267,18 +305,22 @@
   font-size: x-large;
   margin-top: 100px;
 }
-.indexContent .CineLaMina h1 {
+.indexContent .CineLaMina .tituloCine {
   color: #f4f4f0;
   -webkit-text-stroke: 1.5px black;
   font-family: futura-pt, sans-serif;
   font-weight: 800;
   font-style: normal;
   font-size: xxx-large;
-}
-.indexContent .CineLaMina .tituloCine {
   margin-top: 50px;
 }
 .indexContent .CineLaMina .tituloMina {
+  color: #f4f4f0;
+  -webkit-text-stroke: 1.5px black;
+  font-family: futura-pt, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: xxx-large;
   margin-top: 20px;
 }
 .indexContent .CineLaMina .botones {
@@ -373,6 +415,7 @@
   margin-top: 70px;
   margin-left: 20px;
   margin-right: 20px;
+  text-decoration: none;
 }
 .carteleraContent .cartelera .pelicula .tituloPelicula {
   margin-top: 120px;
@@ -417,7 +460,7 @@
   margin-top: 20px;
   width: 300px;
 }
-.locacionContent .texto h1 {
+.locacionContent .texto h2 {
   text-align: center;
   font-family: futura-pt, sans-serif;
   font-weight: 600;
@@ -467,6 +510,7 @@
 }
 .contactoContent form .detalles {
   grid-area: detalles;
+  margin-top: 20px;
 }
 .contactoContent form .detalles textarea {
   width: 100%;
@@ -485,6 +529,7 @@
   background-color: transparent;
   height: 50px;
   width: 100px;
+  margin-top: 40px;
   border: 2px #f4f4f0 solid;
   border-radius: 10px;
   cursor: pointer;
@@ -512,7 +557,7 @@
   width: 300px;
   color: #f4f4f0;
 }
-.nosotrosContent .texto h1 {
+.nosotrosContent .texto h2 {
   text-align: center;
   font-family: futura-pt, sans-serif;
   font-weight: 600;
@@ -526,6 +571,10 @@
   font-weight: 300;
   font-style: italic;
   font-size: medium;
+}
+.nosotrosContent .texto .saltoLinea {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 @media (min-width: 576px) {
@@ -574,17 +623,32 @@
 }
 @media (min-width: 1200px) {
   .carteleraContent .cartelera {
-    width: 60%;
+    width: 90%;
   }
   .carteleraContent .cartelera .pelicula {
+    height: 225px;
+    width: 450px;
     margin-left: 20px;
     margin-right: 20px;
+    margin-top: 100px;
+  }
+  .carteleraContent .cartelera .pelicula .tituloPelicula {
+    margin-top: 160px;
   }
   .nosotrosContent img {
     width: 600px;
   }
   .nosotrosContent .texto {
     margin-top: 10px;
+  }
+}
+@media (min-width: 1400px) {
+  .carteleraContent .cartelera {
+    width: 80%;
+  }
+  .carteleraContent .cartelera .pelicula {
+    height: 225px;
+    width: 450px;
   }
 }
 .pie, .pieNosotros, .piePaginaContacto, .pieLocacion, .pieCartelera, .pieIndex {
@@ -608,7 +672,13 @@
   font-family: futura-pt, sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: xx-large;
+  font-size: 60px;
+}
+.pie .tituloMina h3, .pieNosotros .tituloMina h3, .piePaginaContacto .tituloMina h3, .pieLocacion .tituloMina h3, .pieCartelera .tituloMina h3, .pieIndex .tituloMina h3 {
+  font-family: futura-pt, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 60px;
 }
 .pie .pieContacto, .pieNosotros .pieContacto, .piePaginaContacto .pieContacto, .pieLocacion .pieContacto, .pieCartelera .pieContacto, .pieIndex .pieContacto {
   grid-area: contacto;
@@ -622,6 +692,9 @@
 }
 .pie .pieContacto .correo, .pieNosotros .pieContacto .correo, .piePaginaContacto .pieContacto .correo, .pieLocacion .pieContacto .correo, .pieCartelera .pieContacto .correo, .pieIndex .pieContacto .correo {
   grid-area: correo;
+}
+.pie .pieContacto .correo div, .pieNosotros .pieContacto .correo div, .piePaginaContacto .pieContacto .correo div, .pieLocacion .pieContacto .correo div, .pieCartelera .pieContacto .correo div, .pieIndex .pieContacto .correo div {
+  margin-top: 15px;
 }
 .pie .pieContacto .redesSociales, .pieNosotros .pieContacto .redesSociales, .piePaginaContacto .pieContacto .redesSociales, .pieLocacion .pieContacto .redesSociales, .pieCartelera .pieContacto .redesSociales, .pieIndex .pieContacto .redesSociales {
   grid-area: redesSociales;

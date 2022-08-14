@@ -20,7 +20,10 @@
 
     .tituloMina {
         grid-area: tituloMina;
-        @include fuente(800, normal, xx-large);
+        @include fuente(800, normal, 60px);
+        h3{
+            @include fuente(800, normal, 60px);
+        }
     }
 
     .pieContacto {
@@ -39,6 +42,9 @@
 
         .correo {
             grid-area: correo;
+            div{
+                margin-top: 15px;
+            }
         }
 
         .redesSociales {
