@@ -1,4 +1,11 @@
-.cabezaNormal {
+//Estilo de las navbars que se utilizarán en el proyecto
+
+// Estilo de la navbar que se utilizará en pantallas de escritorio y tabletas, por lo que al ser un diseño
+// Mobile First, primero lo tendremos como con display: None, y en la medias queries al ser una
+// Una pantalla de tableta o superior, pasara a ser display: flex, y de está manera, esta navbar
+// Solo se representará en vista de escritorio.
+
+.navbarNormal {
     position: absolute;
     top: 0px;
     background-color: transparent;
@@ -23,6 +30,8 @@
         text-align: center;
 
         ul {
+            padding-left: 0px !important;
+            margin-bottom: 0px;
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
@@ -47,7 +56,9 @@
     }
 }
 
-.cabezaHamburguesa {
+// Estilo de la navbar que se utilizará en pantallas de telefonos, por lo que será un menú de hamburguesa
+
+.navbarHamburguesa {
     position: absolute;
     top: 0px;
     background-color: transparent;
@@ -152,24 +163,26 @@
         display: none;
     }
 
-    input[type="checkbox"]:checked~.menuItems {
+    input[type="checkbox"]:checked ~ .menuItems {
         transform: translateX(0);
     }
 }
 
-@media (min-width: 768px){
-    .cabezaHamburguesa{
+//En esta media query desaparecerá la navbarHamburguesa, y aparecerá navbarNormal
+@media (min-width: 768px) {
+    .navbarHamburguesa {
         display: none;
     }
 
-    .cabezaNormal{
+    .navbarNormal {
         display: flex;
     }
 }
 
-@media (min-width: 992px){
-    .cabezaNormal{
-        nav{
+//En esta media query se ajustarán algunos aspectos de navbarNormal
+@media (min-width: 992px) {
+    .navbarNormal {
+        nav {
             margin-top: 17px;
             width: 330px;
         }

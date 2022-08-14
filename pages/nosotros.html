@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- Cabecera donde tendremos el SEO (descripción, keywords, título), el enlace a CSS, y enlace a iconos de Font Awesome -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +10,28 @@
     <meta name="description" content="Quienes somos Cine La Mina, conocenos">
     <meta name="keywords" content="cine, cartelera, guanajuato, mexico, peliculas">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Nosotros Cine La Mina</title>
 </head>
 
-<body class="nosotrosGrid">
-    <header class="cabezaNosotros">
+<!-- Cuerpo de Nosotros, donde tendremos una clase nosotrosGrid,
+que nos ayudará con la organización del cuerpo de la pagina Nosotros -->
 
-        <div class="cabezaHamburguesa">
+<body class="nosotrosGrid">
+    <!-- Cabeza de página Nosotros -->
+    <header class="cabezaNosotros">
+        <!-- navbarHamburguesa será nuestra navbar cuado estemos en la vista para móviles (Menu de Hamburguesa) -->
+        <div class="navbarHamburguesa">
             <nav>
+                <!-- Icono de líneas de la navbar de hamburguesa -->
+                <!-- Input para poder realizar la animación y desplegar el menu offcanvas -->
                 <input class="checkbox" type="checkbox" name="" id="" />
                 <div class="hamburgerLines">
                     <span class="line line1"></span>
                     <span class="line line2"></span>
                     <span class="line line3"></span>
                 </div>
+                <!-- Enlaces a las demás páginas html de nuestro sitio web -->
                 <ul class="menuItems">
                     <li>
                         <a href="../index.html">Inicio</a>
@@ -40,11 +50,15 @@
                     </li>
                 </ul>
             </nav>
+            <!-- Logo del sitio web -->
             <img src="../images/Cine_MIna3.png">
         </div>
 
-        <div class="cabezaNormal">
+        <!-- navbarNormal será nuestra navbar cuando estemos en una vista para tabletas o computadoras de escritorio-->
+        <div class="navbarNormal">
+            <!-- Logo del sitio web -->
             <img src="../images/Cine_MIna3.png">
+            <!-- Enlaces a las demás páginas html de nuestro sitio web -->
             <nav>
                 <ul>
                     <li>
@@ -65,7 +79,7 @@
                 </ul>
             </nav>
         </div>
-
+        <!-- Titulo de la cabeza de página Nosotros -->
         <div class="titulo">
             <h1>Nosotros</h1>
             <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
@@ -73,66 +87,77 @@
 
     </header>
 
+    <!-- Contenido de pagina locacion -->
     <main class="nosotrosContent">
+        <!-- Imagen aside del contenido de la página Nosotros -->
         <img src="../images/CineNosotros.jpg" alt="">
+        <!-- Parte del texto del contenido de la página de Locación -->
         <article class="texto">
-            <h1>Historia</h1>
+            <h2>Historia</h2>
+            <div class="saltoLinea">
+                <h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut!
+                    Ratione
+                    sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut.
+                    Ratione sit magnam ab est id molestiae dolor, voluptatum accusamus Ullam tempore natus. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
+                    sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus.
+                </h3>
+            </div>
+            <div class="saltoLinea">
+                <h3>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut!
+                    Ratione
+                    sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut!
+                    Ratione
+                    sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
+                </h3>
+            </div>
             <h3>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
-                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
+                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
+                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus 
             </h3>
             <h3>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
-                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
+                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id! Lorem
+                ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
+                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus 
             </h3>
-            <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
-                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
-            </h3>
-            <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
-                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
-            </h3>
-            <br>
-            <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
-                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
-            </h3>
-            <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
-                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
-            </h3>
-            <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
-                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
-            </h3>
-            <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores nulla deserunt ut! Ratione
-                sit magnam ab est id molestiae dolor, voluptatum accusamus et? Ullam tempore natus fugiat id!
-            </h3>
+
         </article>
-        
+
     </main>
 
+    <!-- Pie de página Nosotros -->
     <footer class="pieNosotros">
+        <!-- Título de Cine La Mina en el footer -->
         <div class="tituloMina">
-            <h1>Cine</h1>
-            <h1>La Mina</h1>
+            <h3>Cine</h3>
+            <h3>La Mina</h3>
         </div>
+        <!-- Contacto en el footer -->
         <div class="pieContacto">
-
+            <!-- Datos de contacto en el footer-->
             <div class="titulo">
                 <h2>Contacto</h2>
             </div>
 
+            <!-- Datos de contacto en el footer-->
             <div class="correo">
                 <h3>cine@lamina.com</h3>
                 <h3>473-999-9999</h3>
-                <br>
-                <h3>Datos de Contacto: </h3>
-                <p>Lorem ipsum dolor sit, amet </p>
+                <div>
+                    <h3>Datos de Contacto: </h3>
+                    <p>Lorem ipsum dolor sit, amet </p>
+                </div>
             </div>
 
+            <!-- Redes Sociales en el footer, donde cada div tiene un enlace hacia cada red social -->
+            <!-- Con un icono de Font Awesome -->
             <div class="redesSociales">
                 <div>
                     <a href="https://www.facebook.com/CineLaMina" target="_blank">
@@ -151,6 +176,7 @@
                 </div>
             </div>
         </div>
+
     </footer>
 
 </body>

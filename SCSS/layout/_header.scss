@@ -1,3 +1,7 @@
+//Se encuentran los estilos de las cabezas de cada una de nuestras páginas
+
+//Cabeza default para nuestras páginas, que posteriormente,
+//en nuestras cabezas de alguna página en específico se utilizará extend
 .cabeza {
 
     .titulo {
@@ -18,24 +22,28 @@
     }
 }
 
+// Estilo de cabeza de página Cartelera, donde se hizo extend de nuestra cabeza default (clase: cabeza)
 .cabezaCartelera {
     @extend .cabeza;
     background-color: $verde;
     grid-area: cabezaCartelera;
 }
 
+// Estilo de cabeza de página Locación, donde se hizo extend de nuestra cabeza default (clase: cabeza)
 .cabezaLocacion {
     @extend .cabeza;
     background-color: transparent;
     grid-area: cabezaLocacion;
 }
 
+//Estilo de cabeza de página Contacto, donde se hizo extend de nuestra cabeza default (clase: cabeza)
 .cabezaContacto {
     @extend .cabeza;
     background-color: transparent;
     grid-area: cabezaContacto;
 }
 
+//Estilo de cabeza de página Nosotros, donde se hizo extend de nuestra cabeza default (clase: cabeza)
 .cabezaNosotros{
     @extend .cabeza;
     background-color: transparent;

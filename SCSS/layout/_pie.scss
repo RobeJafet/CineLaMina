@@ -1,3 +1,7 @@
+// Estilos de los pies de las páginas del sitio web 
+
+// estilo de pie default que tendremos en cada una de las páginas, 
+// Y podremos integrarlo con un extend a los demás pies de las demás páginas
 .pie{
     padding: 50px;
     color: $blanco;
@@ -16,7 +20,10 @@
 
     .tituloMina {
         grid-area: tituloMina;
-        @include fuente(800, normal, xx-large);
+        @include fuente(800, normal, 60px);
+        h3{
+            @include fuente(800, normal, 60px);
+        }
     }
 
     .pieContacto {
@@ -35,6 +42,9 @@
 
         .correo {
             grid-area: correo;
+            div{
+                margin-top: 15px;
+            }
         }
 
         .redesSociales {
@@ -112,36 +122,42 @@
     }
 }
 
+// Estilo de pie de página Index 
 .pieIndex{
     @extend .pie;
     grid-area: pieIndex;
     @include degradadoAnimacion(#74b0c8, #0367a6, #0d2549);
 }
 
+// Estilo de pie de página Cartelera
 .pieCartelera{
     @extend .pie;
     grid-area: pieCartelera;
     @include degradadoAnimacion(#2a2d2e, #394a54, #000000);
 }
 
+// Estilo de pie de página Locación
 .pieLocacion{
     @extend .pie;
     grid-area: pieLocacion;
     @include degradadoAnimacion(#22403F, #2A5748, #254D35);
 }
 
+// Estilo de pie de página Contacto
 .piePaginaContacto{
     @extend .pie;
     grid-area: piePaginaContacto;
     @include degradadoAnimacion(#22403F, #2A5748, #254D35);
 }
 
+// Estilo de pie de página Nosotros
 .pieNosotros{
     @extend .pie;
     grid-area: pieNosotros;
     @include degradadoAnimacion(#2a2d2e, #394a54, #000000);
 }
 
+// Animacion de degradado que se mueve
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
