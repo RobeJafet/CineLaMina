@@ -226,6 +226,7 @@ button.btn-close {
   transition: transform 0.4s ease-in-out;
 }
 .navbarHamburguesa .menuItems {
+  padding-left: 0px !important;
   position: absolute;
   top: 0px;
   padding-top: 150px;
