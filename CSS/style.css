@@ -85,14 +85,14 @@ button.btn-close {
   margin-top: 180px;
   margin-left: 30px;
 }
-.cabeza .titulo h1, .cabezaNosotros .titulo h1, .cabezaContacto .titulo h1, .cabezaLocacion .titulo h1, .cabezaCartelera .titulo h1 {
+.cabeza .titulo h2, .cabezaNosotros .titulo h2, .cabezaContacto .titulo h2, .cabezaLocacion .titulo h2, .cabezaCartelera .titulo h2 {
   color: #f4f4f0;
   font-family: futura-pt, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: xx-large;
 }
-.cabeza .titulo h2, .cabezaNosotros .titulo h2, .cabezaContacto .titulo h2, .cabezaLocacion .titulo h2, .cabezaCartelera .titulo h2 {
+.cabeza .titulo h3, .cabezaNosotros .titulo h3, .cabezaContacto .titulo h3, .cabezaLocacion .titulo h3, .cabezaCartelera .titulo h3 {
   color: #f4f4f0;
   margin-top: 10px;
   margin-left: 5px;
